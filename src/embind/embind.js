@@ -1145,7 +1145,7 @@ var LibraryEmbind = {
 
 #if ASYNCIFY
     invokerFnBody += "}\n";
-    invokerFnBody += "return Asyncify.currData ? Asyncify.whenDone().then(onDone) : onDone(" + (returns ? "rv" : "") +");\n"
+    invokerFnBody += "return onDone(" + (returns ? "rv" : "") +");\n"
 #endif
 
     invokerFnBody += "}\n";
